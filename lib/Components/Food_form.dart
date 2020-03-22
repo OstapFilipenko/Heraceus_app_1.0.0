@@ -49,7 +49,6 @@ class _FoodFormState extends State<FoodForm> {
               splashColor: Colors.blueAccent,
               onPressed: () {
                 if (_formKey.currentState.validate()) {  
-                    // If the form is valid, display a Snackbar.  
                     Scaffold.of(context)  
                         .showSnackBar(SnackBar(content: Text('Adding the Datas into the DB...')));  
                   }  
