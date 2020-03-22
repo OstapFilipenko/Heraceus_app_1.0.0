@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:heraceus_v1_0_0/AddFood.dart';
-import 'package:heraceus_v1_0_0/ConsumedFood.dart';
+
+import 'Pages/AddFood.dart';
+import 'Pages/ConsumedFood.dart';
 
 void main() => runApp(MyApp());
 
