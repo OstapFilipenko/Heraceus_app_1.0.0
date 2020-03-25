@@ -27,7 +27,7 @@ class _MyBottomNavBarState extends State<MyBottomNavBar> {
   final List<Widget> _childrenOfMenu = [
     ConsumedFoodPage(backgroundColorOfTitle: Colors.blue,),
     AddFoodPage(backgroundColorOfTitle: Colors.blue)
-  ]; 
+  ];
   void onTappedMenu(int index){
     setState(() {
       _currentIdex = index;

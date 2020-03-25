@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../food.dart';
 
 class ConsumedFoodPage extends StatefulWidget {
   
@@ -23,7 +24,7 @@ class _ConsumedFoodPageState extends State<ConsumedFoodPage> {
         ),
       ),
       body: new Center(
-        child: new Text("Here is the Consumed Food"),
+        child: FoodView(),
       ),
     );
   }
