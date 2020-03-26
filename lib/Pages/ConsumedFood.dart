@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../food.dart';
-
+import '../Components/foodCardSection.dart';
 class ConsumedFoodPage extends StatefulWidget {
   
     final Color backgroundColorOfTitle;
