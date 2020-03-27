@@ -36,6 +36,7 @@ class _FoodViewState extends State<FoodView> {
     super.dispose();
   }
   
+  static const double borderRadius = 20.0;
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +44,17 @@ class _FoodViewState extends State<FoodView> {
       child: new ListView.builder(  
         itemCount: allFood.length,
         itemBuilder: (BuildContext ctxt, int index) {
-          return new Card(
-            color: Colors.blueAccent,
+          return new Container(
+            decoration: new BoxDecoration(
+              color: Colors.blue,
+              borderRadius: new BorderRadius.only(
+                topLeft: Radius.circular(borderRadius),
+                topRight: Radius.circular(borderRadius),
+                bottomLeft: Radius.circular(borderRadius),
+                bottomRight: Radius.circular(borderRadius),
+              )
+            ),
+            padding: const EdgeInsets.all(10.0),
             margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
             child: Column(
               children: <Widget>[
