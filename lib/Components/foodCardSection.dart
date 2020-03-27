@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import '../APIConn.dart';
 
 import 'package:flutter/material.dart';
@@ -11,11 +13,30 @@ class FoodView extends StatefulWidget {
 }
 
 class _FoodViewState extends State<FoodView> {
-  Future<String> lol = APIConn().getData();
-  List<Food> allFood =  APIConn().allFood;
+  var allFood =  new List<Food>();
 
+  _getFood(){
+    APIConn.getFood().then((response){
+      setState(() {
+        Iterable list = json.decode(response.body);
+        allFood = list.map((model) => Food.fromJson(model)).toList();
+      });
+    });
+  }  
+
+
+  @override
+  void initState() {
+    super.initState();
+    _getFood();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
   
-  
+
   @override
   Widget build(BuildContext context) {
     return Container(
